@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang ="no">
+<head>
+<style>
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 4rem;
+  font-family: Arial, sans-serif;
+  /*text-shadow: 0 0 5px #000;*/
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+</style>
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+  <div class="snowflake">
+    ❅
+  </div>
+  <div class="snowflake">
+    ❆
+  </div>
+</div>
+
+<style>
+
+.box {
+    animation: wobble 2s ease infinite;
+}
+
+.smallBox {
+    animation: scalePulse 1s ease 1;
+}
+	
+@keyframes wobble {
+    0%, 100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-32px) rotate(-10deg);
+        transform: translateX(-32px) rotate(-10deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(calc(32px / 2)) rotate(10deg);
+        transform: translateX(calc(32px / 2)) rotate(10deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+        transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+    }
+
+    60% {
+        -webkit-transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+        transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+    }
+
+    75% {
+        -webkit-transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+        transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+    }
+}
+	
+@keyframes scalePulse {
+  0%{
+      -webkit-transform: scale(0%);
+      transform: scale(0%) translateX(-500px) translateY(200px);
+  }
+  50% {
+    -webkit-transform: scale(200%);
+    transform: scale(200%) translateX(50px) translateY(100px);
+  }
+  100%{
+    -webkit-transform: scale(100%);
+    transform: scale(100%) translateX(0px) translateY(0px);
+  }
+}	
+
+.container {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 20px;
+  flex: 1 1 auto;
+}
+
+.smartPhone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.downloadButtonsContainer {
+  max-width: 1000px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.webShopButtonContainer {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.centeredImage {
+  display: block;
+  margin: 0 auto;
+  width: clamp(600px, 80%, 1000px);
+}
+
+body {
+  background-color: #3377FF;
+  background-image: url("Images/TreeBorder.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: auto clamp(40vh,40vh,150vh) ;
+  background-attachment: fixed;
+}
+  
+html {
+	scroll-behavior: smooth;
+}
+
+</style>
+
+<title>Elgspillet</title>
+</head>
+
+<body>
+
+<div class = "container">
+  <div style = "padding-top: 5vh; display: flex;">
+    <div class = "logo">
+      <img src="Images/Elgspillet_logo.png" alt="Elgspillet logo" class="centeredImage">
+    </div>
+  </div>
+
+  <div class ="smartPhone">
+    <div style = "padding: 100px; display: flex;">
+      <div class = "box">
+          <a href = "#download_anchor">
+            <img src="Images/Mobile_wGame_christmas.png" alt="Iphone med spillet på" width = 800px>
+          </a>
+      </div>
+    
+      <div style = "position: absolute; margin-top: -100px; transform:rotate(-12deg);">
+        <div class = "smallBox">
+          <img src="Images/AlleSnakkerHemnes.png" alt="Alle snakker hemnesværing" width = "250vw">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style = "display: flex; justify-content: center;">
+    <div class="downloadButtonsContainer" id="download_anchor">
+      <a href="https://play.google.com/store/apps/details?id=com.StudioGauntlet.Elgspillet&gl=NO">
+        <img src="Images/google-play-badge.png" alt="Last ned spillet til din android telefon" height = "120rem">
+      </a>
+      <a href="https://apps.apple.com/app/id6444916546">
+        <img src="Images/Download_on_the_App_Store_Badge_EN-01-01.png" alt="Last ned spillet til din apple telefon"  height = "120rem">
+      </a>
+    </div>
+  </div>
+
+  <div class="webShopButtonContainer">
+    <a href="https://thegauntletoutlet.myspreadshop.no/gled-elg-lig+jul+julegenser+2022-A63775e75623cef1f10db6491?productType=5&sellable=Xyj2e7OlGnT05jVBlVOq-5-26&appearance=8">
+      <img src="Images/Julegenser2022_AD.png" alt="Kjøp årets julegenser!" width = "400vw" style = "border-radius: 25px;  border-style: solid; border-width: 2px; border-color: #B7B7B7">
+    </a>
+  </div>
+</div>
+<div style = "flex: 1 1 auto;">
+  <div style ="position: fixed; margin: 0; display: block; left:-10px; bottom: 0;">
+    <img src="Images/jegern_1.png" alt="Jegeren som kommer inn fra venstre">
+  </div>
+  <div style ="position: fixed; margin: 0; display: block; right:-1rem; bottom: 25vh;">
+    <img src="Images/TheMoose_side.png" alt="Elgen som stikker hodet inn fra høyre">
+  </div>
+</div>
+</body>
+</html>
