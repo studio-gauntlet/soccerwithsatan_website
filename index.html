@@ -118,6 +118,7 @@
   margin: 0px;
   display: flex;
   flex-direction: column;
+  
   align-content: space-around;
 }
 
@@ -138,12 +139,11 @@
 }
 
 .downloadButtonsContainer {
-  max-width: 1000px;
   flex: 1 1 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .webShopButtonContainer {
@@ -182,68 +182,76 @@ html {
 
 <body>
 
-<div class = "container">
-  
+	<div style = "flex-direction: column; align-items: center; display: flex;">
 
-<div class = "container">
+		<div class = "container" >
 
-<div style = "height: 3vh;">
-</div>
+			<div style = "height: 3vh;">
+			</div>
 
-  <div class ="smartPhone">
-    <div style = "padding: 100px; display: flex;">
-      <div class = "box">
-          <a href="https://store.steampowered.com/app/1597610/Soccer_With_Satan/">
-            <img src="Images/SWS_CarboardBox.png" alt="Game box art" height = 600px>
-          </a>
-      </div>
+			<div class ="smartPhone">
+				<div style = "padding: 100px; display: flex;">
+				  <div class = "box">
+					  <a href="https://store.steampowered.com/app/1597610/Soccer_With_Satan/">
+						<img src="Images/SWS_CarboardBox.png" alt="Game box art" height = 600px>
+					  </a>
+				  </div>
 
-      <div style = "position: absolute; margin-top: 50px; margin-left: -150px; transform:rotate(-12deg);">
-        <div class = "smallBox">
-          <img src="Images/BannedInTheVatican_ITS_A_JOKE.png" alt="Banned in the Vatican joke stamp" width = "280vw">
-        </div>
-      </div>
+				  <div style = "position: absolute; margin-top: 50px; margin-left: -150px; transform:rotate(-12deg);">
+					<div class = "smallBox">
+					  <img src="Images/BannedInTheVatican_ITS_A_JOKE.png" alt="Banned in the Vatican joke stamp" width = "280vw">
+					</div>
+				  </div>
 
-    </div>
-  </div>
-<!--
-  <div style = "padding-top: 3vh; display: flex;">
-    <div class = "logo">
-      <img src="Images/SWS_logo.png" alt="Soccer with satan logo" class="centeredImage" height = "256rem" width = "auto">
-    </div>
-  </div>
--->
-  <div style = "display: flex; justify-content: center;">
-    <div class="downloadButtonsContainer" id="download_anchor">
-      <a href="https://store.steampowered.com/app/1597610/Soccer_With_Satan/">
-        <img src="Images/Steam_Button.png" alt="Download the game on steam button" height = "120rem">
-      </a>
+				</div>
+			</div>
+			<!--
+			  <div style = "padding-top: 3vh; display: flex;">
+				<div class = "logo">
+				  <img src="Images/SWS_logo.png" alt="Soccer with satan logo" class="centeredImage" height = "256rem" width = "auto">
+				</div>
+			  </div>
+			-->
+			  <div style = "display: flex; justify-content: center;">
+				<div class="downloadButtonsContainer" id="download_anchor">
+				  <a href="https://store.steampowered.com/app/1597610/Soccer_With_Satan/">
+					<img src="Images/Steam_Button.png" alt="Download the game on steam button" height = "120rem">
+				  </a>
+				</div>
+			  </div>
+		  
+		</div>
+		
+		
+		
+		<div style = "display: flex; justify-content: center; position: fixed; margin: 0; display: block; bottom: 0;">
+				
+			<div class="downloadButtonsContainer" id="download_anchor">
+				<a href="https://discord.gg/4kNxtUwmWG">
+					<img src="Images/discord-logo-white.png" alt="Join Discord Button" height = "40rem" style = "padding: 50px">
+				</a>
+				<a href="https://drive.google.com/drive/folders/13kgaT_8tbGe68wmrmz1WUTbpdrcbqdPP?usp=sharing">
+					<img src="Images/Drive Presskit Logo.png" alt="Get assets for press/influencer use button"  height = "40rem" style = "padding: 50px">
+				</a>
+				<a href="https://www.studiogauntlet.com">
+					<img src="Images/SG_logo.png" alt="Studio Gauntlet homepage button"  height = "40rem" style = "padding: 50px">
+				</a>
+			</div>
+				
+		</div>
+		
 	</div>
-  </div>
-  
-  
-  <div style = "display: flex; justify-content: center; padding-top: 100px;">
-    <div class="downloadButtonsContainer" id="download_anchor">
-      <a href="https://discord.gg/4kNxtUwmWG">
-        <img src="Images/discord-logo-white.png" alt="Join Discord Button" height = "40rem" style = "padding: 100px">
-      </a>
-      <a href="https://drive.google.com/drive/folders/13kgaT_8tbGe68wmrmz1WUTbpdrcbqdPP?usp=sharing">
-        <img src="Images/Drive Presskit Logo.png" alt="Get assets for press/influencer use button"  height = "40rem" style = "padding: 100px">
-      </a>
-	  <a href="https://www.studiogauntlet.com">
-        <img src="Images/SG_logo.png" alt="Studio Gauntlet homepage button"  height = "40rem" style = "padding: 100px">
-      </a>
-    </div>
-  </div>
-  
-</div>
-<div style = "flex: 1 1 auto;">
-  <div style ="position: fixed; margin: 0; display: block; left:100px; bottom: 10vh;">
-    <img src="Images/SWS_CapsuleArt_ExportedLayers_NormalBall.png" alt="A football on a dark blue grassy field" height = "80rem">
-  </div>
-  <div style ="position: fixed; margin: 0; display: block; right:100px; bottom: 8vh; ">
-    <img src="Images/SWS_CapsuleArt_ExportedLayers_SatanUnits_Front.png" alt="An armoured demon soccer player" height = "300rem">
-  </div>
-</div>
+		
+		
+	<div style = "flex: 1 1 auto;">
+		<div style ="position: fixed; margin: 0; display: block; left:100px; bottom: 10vh;">
+			<img src="Images/SWS_CapsuleArt_ExportedLayers_NormalBall.png" alt="A football on a dark blue grassy field" height = "115rem">
+		</div>
+		<div style ="position: fixed; margin: 0; display: block; right:100px; bottom: 8vh; ">
+			<img src="Images/SWS_CapsuleArt_ExportedLayers_SatanUnits_Front.png" alt="An armoured demon soccer player" height = "350rem">
+		</div>
+	</div>
+	
+	
 </body>
 </html>
